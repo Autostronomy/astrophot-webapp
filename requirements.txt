@@ -1,0 +1,8 @@
+astrophot
+pyyaml
+matplotlib
+astropy>=5.2.1,<6.0.0
+numpy>=1.23.5
+scipy>=1.8.0
+torch>=2.0.0
+st-theme

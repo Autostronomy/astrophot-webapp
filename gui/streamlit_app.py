@@ -1,9 +1,6 @@
-import os
-
 import matplotlib.pyplot as plt
 import streamlit as st
 from streamlit_theme import st_theme
-import torch
 import numpy as np
 from astropy.io import fits
 import astrophot as ap
