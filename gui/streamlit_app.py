@@ -1,3 +1,5 @@
+import os
+
 import matplotlib.pyplot as plt
 import streamlit as st
 from streamlit_theme import st_theme
@@ -19,8 +21,11 @@ if "fitmessage" not in st.session_state:
     st.session_state.fitmessage = ""
 
 if "target" not in st.session_state:
+    selfloc = os.path.dirname(os.path.abspath(__file__))
     st.session_state.target = ap.image.Target_Image(
-        data=np.array(fits.open("init_image.fits")[0].data, dtype=np.float64),
+        data=np.array(
+            fits.open(os.path.join(selfloc, "init_image.fits"))[0].data, dtype=np.float64
+        ),
         pixelscale=0.262,
         zeropoint=22.5,
         variance="auto",
